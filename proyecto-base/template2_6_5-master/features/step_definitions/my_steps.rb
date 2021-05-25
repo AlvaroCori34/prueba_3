@@ -8,9 +8,9 @@ When("ingreso {string} en {string}") do |value, field|
 end
   
 When("presiono el boton {string}") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+    click_button(string)
 end
   
   Then("deberia devolver {string}") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+    expect(page.body).to match /#{text}/m
   end
