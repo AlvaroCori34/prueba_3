@@ -29,6 +29,11 @@ RSpec.describe "Pruebas del fraccionador de monedas." do
         resultado = fraccionador(monto)
         expect(resultado).to eq [0.5]
     end 
+    it "devuelve monedas fraccionadas para 02 bs" do
+        monto = 0.2
+        resultado = fraccionador(monto)
+        expect(resultado).to eq [0.2]
+    end 
 end
 
 def fraccionador(monto)
@@ -48,6 +53,9 @@ def fraccionador(monto)
         when monto>= 0.5
             monedas.push(0.5)
             monto = monto - 0.5
+        when monto>= 0.2
+            monedas.push(0.2)
+            monto = monto - 0.2
         end
     end
     return monedas
