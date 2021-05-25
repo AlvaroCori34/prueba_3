@@ -3,8 +3,8 @@ Given("estoy en la pagina") do
     visit '/'
 end
   
-When("ingreso {string} en {string}") do |string, string2|
-    pending # Write code here that turns the phrase above into concrete actions
+When("ingreso {string} en {string}") do |value, field|
+    fill_in(field, :with =>value)
 end
   
 When("presiono el boton {string}") do |string|
